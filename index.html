@@ -1,1 +1,704 @@
-soon come
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <!-- 16x16 and 32x32 pixels for desktop browsers -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/icon-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/icon-32.png">
+    <!-- For iOS devices -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/icon-180.png">
+    <!-- For Android devices -->
+    <link rel="manifest" href="manifest.webmanifest">
+    <!-- For Windows devices -->
+    <meta name="msapplication-TileColor" content="#E6E6E6">
+    <meta name="msapplication-TileImage" content="/images/icon-144.png">
+    <meta name="theme-color" content="#E6E6E6">
+    <link rel="icon" type="image/svg+xml" href="images/icon.svg" >
+
+    <!-- OpenGraph meta tags for social sharing -->
+    <meta property="og:title" content="WalletUncon">
+    <meta property="og:description" content="WalletUncon is a one day unconference on blockchain wallets, standards, usability, and more. Come learn from some foundational overview talks, and then split into groups for discussion.">
+    <meta property="og:image" content="/images/open-graph.png">
+    <meta property="og:url" content="https://walletuncon.org">
+    <meta property="og:type" content="website"> <!-- or 'article', 'book', etc. depending on the content -->
+
+    <title>WalletUncon</title>
+
+    <style>
+        /****************************************************************************
+        *****************************************************************************
+        *****************************************************************************
+
+        normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css
+
+        *****************************************************************************
+        *****************************************************************************
+        ****************************************************************************/
+
+        /* Sections
+        ========================================================================== */
+
+        /**
+        * 1. Correct the line height in all browsers.
+        * 2. Prevent adjustments of font size after orientation changes in iOS.
+        */
+
+        html {
+        line-height: 1.15; /* 1 */
+        -webkit-text-size-adjust: 100%; /* 2 */
+        }
+
+        /* Sections
+        ========================================================================== */
+
+        /**
+        * Remove the margin in all browsers.
+        */
+
+        body {
+        margin: 0;
+        }
+
+        /**
+        * Render the `main` element consistently in IE.
+        */
+
+        main {
+        display: block;
+        }
+
+        /**
+        * Correct the font size and margin on `h1` elements within `section` and
+        * `article` contexts in Chrome, Firefox, and Safari.
+        */
+
+        h1 {
+        font-size: 2em;
+        margin: 0.67em 0;
+        }
+
+        /* Grouping content
+        ========================================================================== */
+
+        /**
+        * 1. Add the correct box sizing in Firefox.
+        * 2. Show the overflow in Edge and IE.
+        */
+
+        hr {
+        box-sizing: content-box; /* 1 */
+        height: 0; /* 1 */
+        overflow: visible; /* 2 */
+        }
+
+        /**
+        * 1. Correct the inheritance and scaling of font size in all browsers.
+        * 2. Correct the odd `em` font sizing in all browsers.
+        */
+
+        pre {
+        font-family: monospace, monospace; /* 1 */
+        font-size: 1em; /* 2 */
+        }
+
+        /* Text-level semantics
+        ========================================================================== */
+
+        /**
+        * Remove the gray background on active links in IE 10.
+        */
+
+        a {
+        background-color: transparent;
+        }
+
+        /**
+        * 1. Remove the bottom border in Chrome 57-
+        * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+        */
+
+        abbr[title] {
+        border-bottom: none; /* 1 */
+        text-decoration: underline; /* 2 */
+        text-decoration: underline dotted; /* 2 */
+        }
+
+        /**
+        * Add the correct font weight in Chrome, Edge, and Safari.
+        */
+
+        b,
+        strong {
+        font-weight: bolder;
+        }
+
+        /**
+        * 1. Correct the inheritance and scaling of font size in all browsers.
+        * 2. Correct the odd `em` font sizing in all browsers.
+        */
+
+        code,
+        kbd,
+        samp {
+        font-family: monospace, monospace; /* 1 */
+        font-size: 1em; /* 2 */
+        }
+
+        /**
+        * Add the correct font size in all browsers.
+        */
+
+        small {
+        font-size: 80%;
+        }
+
+        /**
+        * Prevent `sub` and `sup` elements from affecting the line height in
+        * all browsers.
+        */
+
+        sub,
+        sup {
+        font-size: 75%;
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline;
+        }
+
+        sub {
+        bottom: -0.25em;
+        }
+
+        sup {
+        top: -0.5em;
+        }
+
+        /* Embedded content
+        ========================================================================== */
+
+        /**
+        * Remove the border on images inside links in IE 10.
+        */
+
+        img {
+        border-style: none;
+        }
+
+        /* Forms
+        ========================================================================== */
+
+        /**
+        * 1. Change the font styles in all browsers.
+        * 2. Remove the margin in Firefox and Safari.
+        */
+
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+        font-family: inherit; /* 1 */
+        font-size: 100%; /* 1 */
+        line-height: 1.15; /* 1 */
+        margin: 0; /* 2 */
+        }
+
+        /**
+        * Show the overflow in IE.
+        * 1. Show the overflow in Edge.
+        */
+
+        button,
+        input { /* 1 */
+        overflow: visible;
+        }
+
+        /**
+        * Remove the inheritance of text transform in Edge, Firefox, and IE.
+        * 1. Remove the inheritance of text transform in Firefox.
+        */
+
+        button,
+        select { /* 1 */
+        text-transform: none;
+        }
+
+        /**
+        * Correct the inability to style clickable types in iOS and Safari.
+        */
+
+        button,
+        [type="button"],
+        [type="reset"],
+        [type="submit"] {
+        -webkit-appearance: button;
+        }
+
+        /**
+        * Remove the inner border and padding in Firefox.
+        */
+
+        button::-moz-focus-inner,
+        [type="button"]::-moz-focus-inner,
+        [type="reset"]::-moz-focus-inner,
+        [type="submit"]::-moz-focus-inner {
+        border-style: none;
+        padding: 0;
+        }
+
+        /**
+        * Restore the focus styles unset by the previous rule.
+        */
+
+        button:-moz-focusring,
+        [type="button"]:-moz-focusring,
+        [type="reset"]:-moz-focusring,
+        [type="submit"]:-moz-focusring {
+        outline: 1px dotted ButtonText;
+        }
+
+        /**
+        * Correct the padding in Firefox.
+        */
+
+        fieldset {
+        padding: 0.35em 0.75em 0.625em;
+        }
+
+        /**
+        * 1. Correct the text wrapping in Edge and IE.
+        * 2. Correct the color inheritance from `fieldset` elements in IE.
+        * 3. Remove the padding so developers are not caught out when they zero out
+        *    `fieldset` elements in all browsers.
+        */
+
+        legend {
+        box-sizing: border-box; /* 1 */
+        color: inherit; /* 2 */
+        display: table; /* 1 */
+        max-width: 100%; /* 1 */
+        padding: 0; /* 3 */
+        white-space: normal; /* 1 */
+        }
+
+        /**
+        * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+        */
+
+        progress {
+        vertical-align: baseline;
+        }
+
+        /**
+        * Remove the default vertical scrollbar in IE 10+.
+        */
+
+        textarea {
+        overflow: auto;
+        }
+
+        /**
+        * 1. Add the correct box sizing in IE 10.
+        * 2. Remove the padding in IE 10.
+        */
+
+        [type="checkbox"],
+        [type="radio"] {
+        box-sizing: border-box; /* 1 */
+        padding: 0; /* 2 */
+        }
+
+        /**
+        * Correct the cursor style of increment and decrement buttons in Chrome.
+        */
+
+        [type="number"]::-webkit-inner-spin-button,
+        [type="number"]::-webkit-outer-spin-button {
+        height: auto;
+        }
+
+        /**
+        * 1. Correct the odd appearance in Chrome and Safari.
+        * 2. Correct the outline style in Safari.
+        */
+
+        [type="search"] {
+        -webkit-appearance: textfield; /* 1 */
+        outline-offset: -2px; /* 2 */
+        }
+
+        /**
+        * Remove the inner padding in Chrome and Safari on macOS.
+        */
+
+        [type="search"]::-webkit-search-decoration {
+        -webkit-appearance: none;
+        }
+
+        /**
+        * 1. Correct the inability to style clickable types in iOS and Safari.
+        * 2. Change font properties to `inherit` in Safari.
+        */
+
+        ::-webkit-file-upload-button {
+        -webkit-appearance: button; /* 1 */
+        font: inherit; /* 2 */
+        }
+
+        /* Interactive
+        ========================================================================== */
+
+        /*
+        * Add the correct display in Edge, IE 10+, and Firefox.
+        */
+
+        details {
+        display: block;
+        }
+
+        /*
+        * Add the correct display in all browsers.
+        */
+
+        summary {
+        display: list-item;
+        }
+
+        /* Misc
+        ========================================================================== */
+
+        /**
+        * Add the correct display in IE 10+.
+        */
+
+        template {
+        display: none;
+        }
+
+        /**
+        * Add the correct display in IE 10.
+        */
+
+        [hidden] {
+        display: none;
+        }
+
+        /****************************************************************************
+        *****************************************************************************
+        *****************************************************************************
+
+        DESIGN SYSTEM TOKENS
+
+        *****************************************************************************
+        *****************************************************************************
+        ****************************************************************************/
+
+        /* Default colors (Light mode) */
+        :root {
+            --blue: #094EFF; 
+            --light-gray: #E6E6E6;
+            --dark-gray: #292929;
+            --accent-color: var(--blue); 
+            --fg-color: var(--dark-gray); 
+            --bg-color: var(--light-gray);
+            --spacing-unit: 8px;
+        }
+
+        /* Override colors for Dark mode */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --fg-color: var(--light-gray); 
+                --bg-color: var(--dark-gray);  
+            }
+        }
+
+        /* Font definition for CommitMono-450-Regular.otf */
+        @font-face {
+            font-family: 'CommitMono';
+            src: url('fonts/CommitMono-450-Regular.otf') format('opentype');
+            font-weight: 450;
+            font-style: normal;
+            font-display: swap; /* Optional, enhances font rendering performance */
+        }
+
+        /* Font definition for CommitMono-700-Regular.otf */
+        @font-face {
+            font-family: 'CommitMono';
+            src: url('fonts/CommitMono-700-Regular.otf') format('opentype');
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap; /* Optional, enhances font rendering performance */
+        }
+
+        /****************************************************************************
+        *****************************************************************************
+        *****************************************************************************
+
+        THE GOODS
+
+        *****************************************************************************
+        *****************************************************************************
+        ****************************************************************************/
+
+        html,body {
+            background-color: var(--bg-color);
+            color: var(--fg-color);
+            font-family: 'CommitMono', monospace; /* monospace is the fallback font */
+            font-size: 16px;
+            line-height: 150%;
+            box-sizing: border-box;
+        }
+
+        h1,h2,h3,h4,h5,h6 {
+            font-size: 16px;
+        }
+
+        /****************************************************************************
+        *****************************************************************************
+        *****************************************************************************
+
+        THE GOODS
+
+        *****************************************************************************
+        *****************************************************************************
+        ****************************************************************************/
+
+        /* Helpers
+        ========================================================================== */
+
+        .accent-text { color: var(--accent-color) }
+
+        /* only show for screen readers: https://cloudfour.com/thinks/see-no-evil-hidden-content-and-accessibility/ */
+        .sr-only {
+            border: 0; 
+            clip: rect(0 0 0 0); 
+            clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+            -webkit-clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+            height: 1px; 
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+            white-space: nowrap;
+        }
+
+        .btn { 
+            background: var(--fg-color);
+            color: var(--bg-color);
+            padding: 12px 16px;
+            text-decoration: none;
+            font-weight: 700;
+            color: #ffff;
+            text-align: center;
+            display: inline-block;
+            box-sizing: border-box;
+        }
+
+        @media screen and (max-width: 699px) {
+            .btn { 
+                width: 100%;
+            } 
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+        }
+
+        /* Page Header
+        ========================================================================== */
+        
+        .page-header {
+            padding: 60px;
+            text-align: center;
+            border-bottom: 1px dashed var(--accent-color);
+        }
+
+        @media screen and (min-width: 700px) {
+            .page-header h1 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 16px;
+            } 
+            .page-header h2 {
+                margin-top: -32px;
+                margin-left: 44px;
+            }    
+        }
+
+        .page-header .logo-type {
+            max-width: 100%;
+        }
+
+        /* Conference details 
+        ========================================================================== */
+
+        .page-content {
+            max-width: 700px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            padding: 40px;
+        }
+
+        .conference-pitch {
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media screen and (min-width: 700px) {
+            .conference-pitch {
+                gap: 40px;
+            }   
+        }
+
+        .intro-text {
+            padding: 32px;
+            background-color: var(--accent-color);
+            color: var(--light-gray);
+        }
+
+        @media screen and (min-width: 700px) {
+            .actions {
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        @media screen and (max-width: 699px) {
+            .registration-button {
+                position: fixed;
+                bottom: 40px;
+                left: 40px;
+                width: calc(100vw - 80px);
+                z-index: 100000;
+                border: 1px solid var(--bg-color);
+            }   
+        }
+
+        .conference-details {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* First two flex items */
+        .conference-detail-block {
+            padding: 32px;
+            flex: 1;
+            border: 1px dashed var(--accent-color); 
+        }
+
+        .conference-detail-block h3 {
+            margin-top: 0;
+        }
+
+        .conference-detail-block p {
+            margin-bottom: 0;
+        }
+        
+        .conference-detail-block:not(:last-child) {
+            border-bottom: none;
+        }
+
+        @media screen and (min-width: 700px) {
+            .conference-detail-block:first-child {
+                border-right: none;
+            }
+
+            .conference-detail-block:last-child {
+                flex: unset;
+                width: 100%;
+            }
+        }
+
+        /* Page Footer
+        ========================================================================== */
+
+        .page-footer {
+            text-align: center;
+            font-size: 12px;
+            padding: 0 40px 132px;
+            line-height: 140%;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header class="page-header">
+        <h1>
+            <svg class="logo-symbol" width="90" height="113" viewBox="0 0 90 113" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_24_90)">
+                <path d="M55.8621 3.09297V32.1421H86.8966V80.8563H55.8621V109.907L51.2069 107.229L5.37517 80.8563L4.65517 80.4419L3.10345 79.5496V33.4489L5.37517 32.1421L6.2069 31.6642L10.0303 29.4636L51.2069 5.77148L55.8621 3.09297ZM55.8621 0C55.3267 0 54.7898 0.137637 54.3103 0.414458L49.6552 3.09297L8.47862 26.7851L4.65517 28.9857L3.825 29.4621L1.55172 30.7704C0.591207 31.3225 0 32.3447 0 33.4489V79.5496C0 80.6553 0.591207 81.676 1.55172 82.2281L3.10345 83.1204L3.8219 83.5349L49.6536 109.907L54.3088 112.586C54.7883 112.862 55.3252 113 55.8605 113C56.3959 113 56.9328 112.862 57.4122 112.586C58.3728 112.033 58.964 111.011 58.964 109.907V83.9493H86.895C88.6097 83.9493 89.9985 82.5652 89.9985 80.8563V32.1421C89.9985 30.4332 88.6097 29.0491 86.895 29.0491H58.964V3.09297C58.964 1.98723 58.3728 0.966552 57.4122 0.414458C56.9328 0.137637 56.3959 0 55.8605 0L55.8621 0Z" fill="currentColor"/>
+                <path d="M52.7586 8.44995V32.1421H11.582L52.7586 8.44995Z" fill="currentColor"/>
+                <path d="M83.7931 35.2351V77.7634H55.8621V60.234L54.3104 59.3417L12.4138 35.2351H83.7931Z" fill="currentColor"/>
+                <path d="M52.7586 62.0202V104.55L6.20691 77.7634V35.2351L52.7586 62.0202Z" fill="currentColor"/>
+            </g>
+            <defs>
+                <clipPath id="clip0_24_90">
+                    <rect width="90" height="113" fill="white"/>
+                </clipPath>
+            </defs>
+        </svg>
+            <svg class="logo-type" width="408" height="47" viewBox="0 0 408 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M27.416 45H7.57598L0.599976 0.199951H10.52L17.432 44.808H17.496L24.856 0.199951H44.824L52.952 44.872H53.016L58.84 0.199951H68.824L62.872 45H43.032L34.84 0.327953H34.776L27.416 45Z" fill="currentColor"/>
+            <path d="M81.4 45.832C75.128 45.832 68.6 42.504 68.6 35.784C68.6 29.128 75.832 26.376 81.72 26.056L95.032 25.352V24.776C95.032 20.424 91 19.336 86.52 19.336C81.528 19.336 78.264 21.512 78.264 24.52H69.368C69.368 15.816 75.768 12.04 86.52 12.04C98.424 12.04 104.44 16.648 104.44 26.824V44.936H95.16V33.544C95.16 44.104 85.176 45.832 81.4 45.832ZM84.984 39.048C88.824 38.792 95.16 37.768 95.16 33.288V31.624L86.328 32.072C84.216 32.2 78.392 32.392 78.392 35.4C78.392 38.216 82.552 39.176 84.984 39.048Z" fill="currentColor"/>
+            <path d="M107.662 45V0.199951H117.71V45H107.662Z" fill="currentColor"/>
+            <path d="M120.912 45V0.199951H130.96V45H120.912Z" fill="currentColor"/>
+            <path d="M152.018 46.28C141.138 46.28 134.226 40.328 134.226 29.32C134.226 17.8 140.626 12.232 151.762 12.232C163.026 12.232 169.81 18.12 169.81 29.384V31.88L143.314 31.944C143.314 36.168 147.73 38.216 152.146 38.216C156.562 38.216 159.442 36.744 160.018 34.568H169.298C167.698 42.824 161.618 46.28 152.018 46.28ZM143.314 25.928L160.274 26.12C160.274 22.28 155.41 20.296 151.826 20.296C147.858 20.296 143.314 22.088 143.314 25.928Z" fill="currentColor"/>
+            <path d="M187.86 7.36795C187.86 11.72 189.972 13 194.132 13H197.14V21.064H187.86V32.2C187.86 34.632 188.756 35.912 190.804 35.912H197.14V45H187.284C181.332 45 178.196 40.968 178.196 34.568V21.064H171.412V13H187.22C182.228 13 178.132 12.872 178.132 3.84795V0.199951H187.86V7.36795Z" fill="currentColor"/>
+            <path d="M200.734 27.72V0.199951H207.838V27.528C207.838 36.808 214.942 38.152 223.006 38.152C230.75 38.152 238.302 36.744 238.302 27.528V0.199951H245.406V27.72C245.406 41.992 234.846 45 223.006 45C211.166 45 200.734 41.928 200.734 27.72Z" fill="currentColor"/>
+            <path d="M256.527 27.784V45H249.295V13H256.527V26.056C256.527 15.688 265.487 11.976 271.311 11.976C275.919 11.976 285.647 13.384 285.647 26.248V45H278.415V27.784C278.415 21.64 274.063 18.568 268.751 18.568C263.119 18.568 256.527 21.704 256.527 27.784Z" fill="currentColor"/>
+            <path d="M289.546 29.192C289.546 18.568 297.162 12.488 307.466 12.488C315.978 12.488 325.706 16.264 325.834 25.992H318.538C317.578 20.744 312.458 19.016 308.042 19.016C299.53 19.016 296.714 23.752 296.714 29.192C296.714 34.632 299.274 39.496 307.85 39.496C312.266 39.496 317.514 37.832 318.538 32.584H325.834C325.642 42.632 315.722 46.088 307.786 46.088C296.97 46.088 289.546 40.264 289.546 29.192Z" fill="currentColor"/>
+            <path d="M329.546 29C329.546 17.608 336.522 12.36 348.49 12.36C360.266 12.36 367.05 17.224 367.05 29C367.05 40.008 360.074 45.512 348.49 45.512C337.482 45.512 329.546 40.008 329.546 29ZM336.714 28.936C336.714 36.36 341.45 39.176 348.49 39.176C355.85 39.176 359.882 35.592 359.882 28.936C359.882 22.024 355.786 18.76 348.49 18.76C341.13 18.76 336.714 22.28 336.714 28.936Z" fill="currentColor"/>
+            <path d="M378.152 27.784V45H370.92V13H378.152V26.056C378.152 15.688 387.112 11.976 392.936 11.976C397.544 11.976 407.272 13.384 407.272 26.248V45H400.04V27.784C400.04 21.64 395.688 18.568 390.376 18.568C384.744 18.568 378.152 21.704 378.152 27.784Z" fill="currentColor"/>
+        </svg>
+            <span class="sr-only">WalletUncon</span>
+        </h1>
+        <h2 class="accent-text">Nov 17th, 2023 @ DevConnect Istanbul</h2>
+    </header>
+    <div class="page-content">
+        <section class="conference-pitch">
+            <div class="intro-text">
+                <p>WalletUncon is a one day unconference on blockchain wallets, standards, usability, and more. Come learn from some foundational overview  talks, and then split into groups for discussion.</p>
+                <p>We'll be hosted inside of the DevConnect space, and will be the day after the Web3 UX Unconference.</p>
+            </div>
+            <div class="actions">
+                <a href="https://cfp.walletuncon.org/walletuncon-2023/cfp" class="btn btn-secondary">
+                    <span aria-hidden="true">◰</span>
+                    Call For Proposals
+                </a>
+                <a href="https://lu.ma/walletuncon-istanbul-savedate" class="btn btn-primary registration-button">
+                    <span aria-hidden="true">▣</span>
+                    Reserve Your Spot
+                </a>
+            </div>
+        </section>
+        <section class="conference-details">
+            <div class="conference-detail-block">
+                <h3>Why should you come?</h3>
+                <p>Are you actively working on designing or improving a Wallet in the web3 space? Then this is your chance to put forward a problem, a solution, or a collaboration proposal that you've been thinking about you for a while, or even just an idea you've been thinking about that could have a massive impact to the web3 ecosystem. </p>
+            </div>
+            <div class="conference-detail-block">
+                <h3>Who’ll be there?</h3>
+                <p>Our collaborative event includes web3 veterans, infrastructure heads, producty creatives, and wallet-focused builders, all of whom can bring their respective insights to any collaborative conversation about user design, security, and/or ergonomics.</p>
+            </div>
+            <div class="conference-detail-block full">
+                <h3>Who should come?</h3>
+                <p>All DevConnnect attendees are welcome-- Wallet implementers, DApp and smart contract implementers, EIP enthusiasts, or GIGAbrain degens-- as long as you commit to sharing ideas respectively and productively (DevCon's <a href="https://devcon.org" target="blank" noreferrer>code of conduct</a> applies!).</p>
+            </div>
+        </section>
+    </div>
+    <footer class="page-footer">
+        <span class="accent-text">Copy anything from this site, if you want. 2023.</span>
+    </footer>
+</body>
+
+</html>
