@@ -457,6 +457,10 @@
             font-size: 16px;
         }
 
+        a {
+            color: var(--accent-color);
+        }
+
         /****************************************************************************
         *****************************************************************************
         *****************************************************************************
@@ -622,9 +626,26 @@
 
         .page-footer {
             text-align: center;
-            font-size: 12px;
             padding: 0 40px 132px;
             line-height: 140%;
+            padding: 40px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 32px;
+            margin: 16px;
+        }
+    
+        .social-links a {
+            text-decoration: none;
+        }
+    
+        .social-links svg {
+            vertical-align: middle;
+            margin-right: 4px;
         }
 
     </style>
@@ -662,45 +683,54 @@
         </svg>
             <span class="sr-only">WalletUncon</span>
         </h1>
-        <h2 class="accent-text">Nov 17th, 2023 @ Devconnect Istanbul</h2>
+        <h2 class="accent-text">Nov 17th, 2023 @ DevConnect Istanbul</h2>
     </header>
     <div class="page-content">
         <section class="conference-pitch">
             <div class="intro-text">
-                <p>WalletUncon is a one day unconference on wallets, standards, usability, and more. Come learn from some foundational overview  talks, and then split into groups for discussion.</p>
-                <pWe'll be hosted inside the ICC, the same venue as the Devconnect Cowork, and will be the day after the Web3 UX Unconference.</p>
+                <p>WalletUncon is a one day unconference on blockchain wallets, standards, usability, and more. Come learn from some foundational overview  talks, and then split into groups for discussion.</p>
+                <p>We'll be hosted inside of the DevConnect space, and will be the day after the Web3 UX Unconference.</p>
             </div>
             <div class="actions">
                 <a href="https://cfp.walletuncon.org/walletuncon-2023/cfp" class="btn btn-secondary">
                     <span aria-hidden="true">◰</span>
                     Call For Proposals
                 </a>
-                <a href="https://lu.ma/event/evt-foTwMurBToGKvmz" class="btn btn-primary registration-button" data-luma-action="checkout"
-                data-luma-event-id="evt-foTwMurBToGKvmz">
+                <a href="https://lu.ma/walletuncon-istanbul-savedate" class="btn btn-primary registration-button">
                     <span aria-hidden="true">▣</span>
                     Reserve Your Spot
                 </a>
-
-                <script id="luma-checkout" src="https://embed.lu.ma/checkout-button.js"></script>
             </div>
         </section>
         <section class="conference-details">
             <div class="conference-detail-block">
                 <h3>Why should you come?</h3>
-                <p>Do you want to improve the wallet ecosystem? Then this is your chance to put forward a problem, a solution, or a collaboration proposal.</p>
+                <p>Are you actively working on designing or improving a Wallet in the web3 space? Then this is your chance to put forward a problem, a solution, or a collaboration proposal that you've been thinking about you for a while, or even just an idea you've been thinking about that could have a massive impact to the web3 ecosystem. </p>
             </div>
             <div class="conference-detail-block">
                 <h3>Who’ll be there?</h3>
-                <p>Our collaborative event includes experienced web3 magicians, infrastructure heads, producty creatives, and wallet-focused builders, all of whom can bring their respective insights to any collaborative conversation about user design, security, and/or ergonomics.</p>
+                <p>Our collaborative event includes web3 veterans, infrastructure heads, producty creatives, and wallet-focused builders, all of whom can bring their respective insights to any collaborative conversation about user design, security, and/or ergonomics.</p>
             </div>
             <div class="conference-detail-block full">
                 <h3>Who should come?</h3>
-                <p>Our <b>collaborative</b> event welcomes everyone with insights to any conversation about user design, security, and/or ergonomics as long as they can commit to sharing ideas respectively and productively (<a href="https://devcon.org/en/code-of-conduct/">DevCon's code of conduct</a> applies!).</p>
+                <p>All DevConnnect attendees are welcome-- Wallet implementers, DApp and smart contract implementers, EIP enthusiasts, or GIGAbrain degens-- as long as you commit to sharing ideas respectively and productively (DevCon's <a href="https://devcon.org" target="blank" noreferrer>code of conduct</a> applies!).</p>
             </div>
         </section>
     </div>
     <footer class="page-footer">
         <span class="accent-text">Copy anything from this site, if you want. 2023.</span>
+        <div class="social-links">
+            <a  aria-label="Follow WalletUncon on Bluesky" 
+                target="_blank" 
+                href="https://bsky.app/profile/walletuncon.org">
+                Bluesky: @walletuncon.org
+            </a>
+            <a  aria-label="Follow WalletUncon on Twitter / X" 
+                target="_blank" 
+                href="https://twitter.com/WalletUncon">
+                Twitter/X: @WalletUncon
+            </a>
+        </div>
     </footer>
 </body>
 
