@@ -654,16 +654,25 @@
             border: 3px groove var(--border-color); 
         }
 
-        .conference-detail-block h3 {
+        .conference-detail-block *:first-child {
             margin-top: 0;
         }
 
-        .conference-detail-block p {
+        .conference-detail-block *:last-child {
             margin-bottom: 0;
         }
         
         .conference-detail-block:not(:last-child) {
             border-bottom: none;
+        }
+
+        .conference-detail-block ul {
+            padding-left: 0;
+            list-style-type: circle;
+        }
+
+        .conference-detail-block li {
+            margin-bottom: 1rem;
         }
 
         /* Page Footer
@@ -748,7 +757,8 @@
             </div>
         </section>
         <div>
-            <h1>Announced Sessions</h1>
+            <h1>Scheduled Speakers</h1>
+            <p>Additional unconference sessions will spontaneously occur the day of the conference.</p>
             <div class="speaker-cards">
                 <img class="speaker-card" src="/images/speaker-cards/aaliyah.png" alt="Aaliyah Pierre - Fostering Inclusive Web3 Wallet Design"/>
                 <img class="speaker-card" src="/images/speaker-cards/agost.png" alt="Agost Biro - How to avoid asking for permission?"/>
@@ -806,9 +816,32 @@
                     <h3>What is an unconference?</h3>
                     <p>Don't expect a conference — expect an unconference! We'll give you a primer the morning of, but encourage you to familiarize yourself with the format: <a href="https://en.wikipedia.org/wiki/Unconference">https://en.wikipedia.org/wiki/Unconference</a>.</p>
                     <p>The goal is for everyone to participate, and for all of us to walk away with next steps. Lightning talks to focus us in the morning and Fishbowl style workshops & discussions in the afternoon to go deep.</p>
-                    <p>If you're running a workshop session you won't need to prepare a traditional presentation and lecture for 30 minutes. Just bring a topic with some good questions or opinions and we'll help get the right people in the room. </p>
+                    <p>If you're running a workshop session you won't need to prepare a traditional presentation and lecture for 30 minutes. Just bring a topic with some good questions or opinions and we'll help get the right people in the room.</p>
                 </div>
             </section>
+        </div>
+        <div>
+            <h1>Organizing Team</h1>
+            <div class="conference-detail-block full">
+                <p>This event was made possible by the efforts and contributions of (in alphabetical order):</p>
+                <ul>
+                    <li><a href="https://twitter.com/bmann"><b>Boris Mann</b> (@bmann)</a><br/>
+                        ⌱ <a href="fission.codes">Fission</a>
+                    </li>
+                    <li><a href="https://twitter.com/by_caballero"><b>Juan Caballero</b> (@bumblefudge)</a><br/>
+                        ⌱ <a href="https://github.com/ChainAgnostic">ChainAgnostic (CASA)</a></li>
+                    <li><a href="https://twitter.com/PryvitKyle"><b>Kyle Den Hartog</b> (@PryvitKyle)</a><br/>
+                        ⌱ <a href="https://brave.com">Brave</a></li>
+                    <li><a href="https://twitter.com/mr_ligi"><b>Ligi</b> (@mr_ligi)</a><br/>
+                        ⌱ <a href="https://ethereum.org/">Ethereum</a></li>
+                    <li><a href="https://twitter.com/depatchedmode"><b>Ryan</b> (@depatchedmode)</a><br/>
+                        ⌱ <a href="https://everywhere.computer">Everywhere Computer</a></li>
+                    <li><a href="https://twitter.com/tanyaef_"><b>Tanya</b> (@tanyaef_)</a><br/>
+                        ⌱ <a href="https://safe.global/">Safe</a></li>
+                    <li><a href="https://twitter.com/ulerdogan"><b>Ulaş Erdogan</b> (@ulerdogan)</a><br/>
+                        ⌱ <a href="https://getclave.io">Clave</a></li>
+                </ul>
+            </div>
         </div>
     </div>
     <footer class="page-footer">
