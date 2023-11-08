@@ -717,8 +717,8 @@
         }
     
         document.addEventListener('DOMContentLoaded', function() {
-            var organizers = document.querySelector('#organizers');
-            var speakers = document.querySelector('#speakers');
+            var organizers = document.querySelector('#organizer-cards');
+            var speakers = document.querySelector('#speaker-cards');
             shuffleItems(organizers);
             shuffleItems(speakers);
         });
@@ -777,9 +777,10 @@
             </div>
         </section>
         <div>
+            <a id="speakers"></a>
             <h1>Scheduled Speakers</h1>
             <p>Additional <a href="#unconference-definition">unconference</a> sessions will spontaneously occur the day of the conference.</p>
-            <div class="speaker-cards" id="speakers">
+            <div class="speaker-cards" id="speaker-cards">
                 <a href="https://cfp.walletuncon.org/walletuncon-2023/talk/V3SFRN/">
                     <img class="speaker-card" src="/images/speaker-cards/aaliyah.png" alt="Aaliyah Pierre - Fostering Inclusive Web3 Wallet Design"/>
                 </a>
@@ -885,6 +886,7 @@
             </div>
         </div>
         <div>
+            <a id="faqs"></a>
             <h1>FAQs</h1>
             <section class="conference-details">
                 <div class="conference-detail-block">
@@ -909,15 +911,16 @@
             </section>
         </div>
         <div>
+            <a id="organizers"></a>
             <h1>Organizing Team</h1>
             <div class="conference-detail-block full">
                 <p>This event was made possible by the efforts and contributions of:</p>
-                <ul id="organizers">
+                <ul id="organizer-cards">
                     <li><a href="https://twitter.com/bmann">Boris Mann</a></li>
-                    <li><a href="https://twitter.com/by_caballero">Juan Caballero</a></li>
+                    <li><a href="https://twitter.com/by_caballero">bumblefudge</a></li>
                     <li><a href="https://twitter.com/PryvitKyle">Kyle Den Hartog</a></li>
                     <li><a href="https://ligi.de">Ligi</a></li>
-                    <li><a href="https://twitter.com/depatchedmode">Ryan (@depatchedmode)</a></li>
+                    <li><a href="https://twitter.com/depatchedmode">depatchedmode</a></li>
                     <li><a href="https://twitter.com/tanyaef_">Tanya</li>
                     <li><a href="https://twitter.com/ulerdogan">Ulaş Erdogan</a></li>
                 </ul>
