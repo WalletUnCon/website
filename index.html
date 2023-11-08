@@ -708,6 +708,23 @@
         }
 
     </style>
+
+    <script>
+        // Function to shuffle the list items
+        function shuffleOrganizers(containerEl) {
+        for (var i = containerEl.children.length; i >= 0; i--) {
+            containerEl.appendChild(containerEl.children[Math.random() * i | 0]);
+        }
+        }
+    
+        // Event that triggers once the DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+        // Select the ul element containing the list items
+        var organizers = document.querySelector('#organizers');
+        // Call the shuffle function with the selected ul
+        shuffleOrganizers(organizers);
+        });
+    </script>
 </head>
 
 <body>
@@ -829,13 +846,13 @@
         <div>
             <h1>Organizing Team</h1>
             <div class="conference-detail-block full">
-                <p>This event was made possible by the efforts and contributions of (in alphabetical order):</p>
-                <ul>
+                <p>This event was made possible by the efforts and contributions of:</p>
+                <ul id="organizers">
                     <li><a href="https://twitter.com/bmann">Boris Mann</a></li>
                     <li><a href="https://twitter.com/by_caballero">Juan Caballero</a></li>
                     <li><a href="https://twitter.com/PryvitKyle">Kyle Den Hartog</a></li>
                     <li><a href="https://ligi.de">Ligi</a></li>
-                    <li><a href="https://twitter.com/depatchedmode">Ryan</a></li>
+                    <li><a href="https://twitter.com/depatchedmode">Ryan (@depatchedmode)</a></li>
                     <li><a href="https://twitter.com/tanyaef_">Tanya</li>
                     <li><a href="https://twitter.com/ulerdogan">Ulaş Erdogan</a></li>
                 </ul>
