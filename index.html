@@ -540,10 +540,6 @@
         html {
             min-width: 320px;
         }
-
-        a {
-            word-break: break-all;
-        }
         
         .page-header {
             padding: calc(var(--spacing-unit) * 5);
@@ -589,6 +585,13 @@
             .conference-pitch {
                 gap: calc(var(--spacing-unit) * 3);
             }   
+        }
+
+        .marquee-text {
+            padding: 16px 32px;
+            background-color: #EAFF09;
+            color: var(--gray-700);
+            border: 3px groove #EAFF09;
         }
 
         .intro-text {
@@ -680,12 +683,12 @@
             border-bottom: none;
         }
 
-        .conference-detail-block ul {
+        ul {
             padding-left: 0;
             list-style-type: circle;
         }
 
-        .conference-detail-block li {
+        li {
             margin-bottom: 1rem;
         }
 
@@ -769,32 +772,44 @@
         <h2 class="accent-text">Nov 17th, 2023 @ <a href="https://devconnect.org">DevConnect Istanbul</a></h2>
     </header>
     <div class="page-content">
+        <section class="marquee-text">
+            <marquee>
+                🔜 🔜 🔜 🔜 🔜 🔜 🔜 🔜 THE DAY FAST APPROACHES 🔜 🔜 🔜 🔜 🔜 🔜 🔜 🔜
+            </marquee>
+            <h2></h2>
+            <ul>
+                <li><b>Location:</b> <a href="https://goo.gl/maps/PgXHAYTuZAL9rgvZ8">Devconnect Cowork (Istanbul Congress Center)</a> – Main Stage is at Beyazit, on floor B2</li>
+                <li><b>Registration:</b> You're encouraged to be ready with your QR codes before you arrive — they will be emailed to you. If you don't already have a Devconnect Cowork wristband, please check in first at the Devconnect Cowork registration booth. Otherwise, head straight to the main stage to get your WalletUncon event wristband.</li>
+                <li><b>How the day will go:</b> We'll review <a href="https://docs.google.com/presentation/d/15LGx-NSt9_mTZweGjmPoUnQ7owthpg3brLRS2AaIUn8/edit#slide=id.g23bca70b10b_0_1">this outline</a> in the morning, but <i>encourage you to read ahead!</i> <b><small>TLDR:</small></b> be prepared to help out, listen more than you talk, and feel free to float around. The goal is healthy discussion and learning.</li>
+                <li><b>Agenda:</b> We'll have some foundational lightning talks to start the day, then <a href="https://hackmd.io/PSAuGF9nR2-isyWoaCtLYw?view">finalize the agenda</a>. At the end of the day we'll convene to share our notes and closing thoughts.</li>
+            </ul>
+        </section>
         <section class="conference-pitch">
-            <div class="intro-text">
-                <p>WalletUncon is a one day <a href="#unconference-definition">unconference</a> on blockchain wallets, standards, usability, and more. Come learn from some foundational overview  talks, and then split into groups for discussion.</p>
-                <p>We'll be hosted inside of the DevConnect space, and will be the day after the Web3 UX Unconference.</p>
-            </div>
+
             <div class="actions">
-                <a href="https://cfp.walletuncon.org/walletuncon-2023/schedule" class="btn btn-secondary">
-                    <span aria-hidden="true">◰</span>
-                    Schedule
+
+                <a href="https://app.streameth.org/devconnect/wallet_unconference" class="btn btn-secondary registration-button">
+                    <span aria-hidden="true">⌱</span>
+                    Livestream
                 </a>
-                <a href="https://tickets.walletuncon.org" class="btn btn-primary registration-button">
+                <a href="https://tickets.walletuncon.org" class="btn btn-secondary">
                     <span aria-hidden="true">▣</span>
                     Tickets
                 </a>
             </div>
             <div class="actions">
-                <a href="https://app.streameth.org/devconnect/wallet_unconference" class="btn btn-secondary">
-                    <span aria-hidden="true">⌱</span>
-                    Livestream
+                <a href="https://hackmd.io/PSAuGF9nR2-isyWoaCtLYw?view" class="btn btn-primary registration-button">
+                    <span aria-hidden="true">◰</span>
+                    Agenda
                 </a>
             </div>
         </section>
         <div>
             <a id="speakers"></a>
-            <h1>Scheduled Speakers in random order</h1>
-            <p>Additional <a href="#unconference-definition">unconference</a> sessions will spontaneously occur the day of the conference.</p>
+            <h1>Scheduled Speakers<sup><small>{in random order}</small></sup></h1>
+            <p>
+                There will be <a href="https://hackmd.io/PSAuGF9nR2-isyWoaCtLYw?view#Agenda">scheduled lightning talks</a> in the morning. And <a href="https://hackmd.io/PSAuGF9nR2-isyWoaCtLYw?view#Agenda">scheduled breakout sessions</a> in the afternoon. The time and location of <a href="https://hackmd.io/PSAuGF9nR2-isyWoaCtLYw?view#Unscheduled-Proposals">unscheduled sessions</a> will be finalized the day of the conference.
+            </p>
             <div class="speaker-cards" id="speaker-cards">
                 <a href="https://cfp.walletuncon.org/walletuncon-2023/talk/V3SFRN/">
                     <img class="speaker-card" src="/images/speaker-cards/aaliyah.png" alt="Aaliyah Pierre - Fostering Inclusive Web3 Wallet Design"/>
@@ -906,6 +921,7 @@
             <section class="conference-details">
                 <div class="conference-detail-block">
                     <h3>Why should you come?</h3>
+                    <p>WalletUncon is a one day <a href="#unconference-definition">unconference</a> on blockchain wallets, standards, usability, and more.</p>
                     <p>Are you actively working on designing or improving a Wallet in the web3 space? Then this is your chance to put forward a problem, a solution, or a collaboration proposal that you've been thinking about for a while, or even just an idea you've been thinking about that could have a massive impact to the web3 ecosystem. </p>
                 </div>
                 <div class="conference-detail-block">
@@ -919,9 +935,15 @@
                 <div class="conference-detail-block full">
                     <a id="unconference-definition"></a>
                     <h3>What is an unconference?</h3>
-                    <p>Don't expect a conference — expect an unconference! We'll give you a primer the morning of, but encourage you to familiarize yourself with the format: <a href="https://en.wikipedia.org/wiki/Unconference">https://en.wikipedia.org/wiki/Unconference</a>.</p>
+                    <p>Don't expect a conference — expect an unconference! We'll give you a primer the morning of, but encourage you to familiarize yourself with the format<sup><a href="#footnote-1">1</a></sup>. We've prepared <a href="https://docs.google.com/presentation/d/15LGx-NSt9_mTZweGjmPoUnQ7owthpg3brLRS2AaIUn8/edit#slide=id.g23bca70b10b_0_1">a primer</a>.</p>
                     <p>The goal is for everyone to participate, and for all of us to walk away with next steps. Lightning talks to focus us in the morning and Fishbowl style workshops & discussions in the afternoon to go deep.</p>
                     <p>If you're running a workshop session you won't need to prepare a traditional presentation and lecture for 30 minutes. Just bring a topic with some good questions or opinions and we'll help get the right people in the room.</p>
+                </div>
+                <div class="conference-detail-block full">
+                    <ol>
+                        <li><a id="footnote-1"></a>A history of the unconference format: <a href="https://en.wikipedia.org/wiki/Unconference">https://en.wikipedia.org/wiki/Unconference</a>
+                        </li>
+                    </ol>
                 </div>
             </section>
         </div>
